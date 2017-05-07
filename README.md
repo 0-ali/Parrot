@@ -16,22 +16,22 @@ The diagram below describing
 1. Clone parrot repo:
   
   ```bash
-  git clone https://github.com/xc0d3rz/Parrot.git && cd Parrot
+  git clone git@github.com:xc0d3rz/Parrot.git && cd Parrot
   ```
 
 2. Install dependencies
   
-   ```bash
-   npm install 
-   ```
+  ```bash
+  npm install 
+  ```
 3. Start the webserver
 
-    ```bash
-    npm start
-    ```
+  ```bash
+  npm start
+  ```
 4. Go to the webserver
-    http://localhost:3000
-    
+  http://localhost:3000
+  
  A screenshot ;)
  
  ![screenshot for parrot](https://cdn.rawgit.com/xc0d3rz/Parrot/989c0437/static-demo.png)
