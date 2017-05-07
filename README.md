@@ -16,7 +16,7 @@ The diagram below describing
 1. Clone parrot repo:
   
   ```bash
-  git clone git@github.com:xc0d3rz/Parrot.git && cd Parrot
+  git clone https://github.com/xc0d3rz/Parrot.git && cd Parrot
   ```
 
 2. Install dependencies
