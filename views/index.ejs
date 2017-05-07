@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <meta name="author" content="<%= author %>">
+    <link rel="stylesheet" href="/stylesheets/demotemplate.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<header>
+    <img src="/images/logo.svg">
+</header>
+<div id="parrot-1">
+    <img src="/images/parrot1.svg" role="presentation">
+</div>
+<div align="center" style="width: 160%;margin-left: -30%;">
+    <div class="round-button">
+        <a id="control" status="paused" onclick="control(this);">
+            <img id="status" src="/images/start.svg"/>
+        </a>
+    </div>
+</div>
+<div class="options" id="container">
+    <center>
+        <div class="option">
+            <span for="language">From</span>
+            <select name="language" id="language" class="dropdown dropdown--language" aria-label="language"></select>
+            <span for="voice">To</span>
+            <select name="voice" id="voice" class="dropdown dropdown--voice"></select>
+        </div>
+    </center>
+</div>
+<div id="parrot-2">
+    <img src="/images/parrot2.svg" role="presentation">
+</div>
+<div id="support-message" class="support-message"></div>
+<img src="/images/soundwave.svg" role="presentation" class="soundwave">
+<script src="/javascripts/typed.js"></script>
+<script src="/javascripts/Parrot.js"></script>
+<script src="/javascripts/Parrot.core.js"></script>
+<script>
+    var parrot = new Parrot();
+    parrot.isSupported();
+    setInterval(function(){
+       parrot.loadOptions();
+    },900);
+    function control(e){
+     if(e.getAttribute('status') == "paused"){
+         parrot.SpeechRecognition(1);
+     }else{
+         parrot.SpeechRecognition(0);
+     }
+    }
+</script>
+</body>
+</html>
